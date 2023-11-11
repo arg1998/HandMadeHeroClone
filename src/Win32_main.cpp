@@ -119,9 +119,6 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE prevInstance, LPSTR commandLine
 {
     
     WNDCLASS windowClass = {};
-
-    // TODO: check if HREDRAW or VREDRAW still matter! 
-
     windowClass.style = CS_OWNDC | CS_HREDRAW; // we can have our own Device Class (DC) resource from Windows kernel 
     windowClass.lpfnWndProc = mainWindowCallback;
     windowClass.hInstance = instance; // or we can use GetModuleName(0) if we don't have a hInstance passed to us
